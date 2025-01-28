@@ -162,7 +162,7 @@ import {
         },
       ],
       image: portfolio,
-      source_code_link: "https://github.com/Abdalla2024/Portfolio",
+      source_code_link: "https://github.com/Abdalla2024/Abdalla2024.github.io",
     },
     {
       name: "nVolve",
