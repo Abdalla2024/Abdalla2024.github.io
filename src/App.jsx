@@ -1,26 +1,36 @@
-import { BrowserRouter } from 'react-router-dom';
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
+import About from './pages/About'
+import Experience from './pages/Experience'
+import Projects from './pages/Projects'
+import Contact from './pages/Contact'
 
-import { About, Contact, Experience,
-Hero, Navbar, Tech, Works, StarsCanvas } from './components';
-
-const App = () => {
+function App() {
   return (
-    <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <Navbar />
-          <Hero />
-        </div>
-        <About />
-        <Experience />
-        <Tech />
-        <Works />
-        <div className="relative z-0">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <Navbar />
+      <div className="w-full">
+        <section id="home" className="min-h-screen w-full pt-16">
+          <Home />
+        </section>
+        
+        <section id="about" className="min-h-screen w-full">
+          <About />
+        </section>
+
+        <section id="experience" className="min-h-screen w-full">
+          <Experience />
+        </section>
+
+        <section id="projects" className="min-h-screen w-full">
+          <Projects />
+        </section>
+
+        <section id="contact" className="w-full py-16">
           <Contact />
-          <StarsCanvas />
-        </div>
+        </section>
       </div>
-    </BrowserRouter>
+    </div>
   )
 }
 
