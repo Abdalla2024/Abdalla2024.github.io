@@ -13,7 +13,43 @@ const Navbar = () => {
 
   const scrollToSection = (elementId) => {
     const element = document.getElementById(elementId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    if (element) {
+      // Get the navbar height to use as offset
+      const navbarHeight = document.querySelector('header').offsetHeight;
+      
+      // Different offset adjustments based on section
+      let extraOffset = 0;
+      
+      // Adjust offset based on which section we're scrolling to
+      switch (elementId) {
+        case 'projects':
+          extraOffset = 50; // Keep projects offset as is
+          break;
+        case 'about':
+          extraOffset = -25; // Reduced offset for less space above About
+          break;
+        case 'experience':
+          extraOffset = -25; // Reduced offset for less space above Experience
+          break;
+        case 'contact':
+          extraOffset = 30; // Keep contact as is
+          break;
+        default:
+          extraOffset = 0; // No extra offset for home
+      }
+      
+      // Get the element's position relative to the viewport
+      const elementPosition = element.getBoundingClientRect().top;
+      
+      // Get the current scroll position
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight - extraOffset;
+      
+      // Scroll to the calculated position
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
     setIsOpen(false);
   };
 
