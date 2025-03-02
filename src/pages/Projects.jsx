@@ -31,10 +31,10 @@ const Projects = () => {
   return (
     <div className="w-full mb-24">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-black mt-2">
+        <h2 className="text-4xl font-black mt-2 text-gray-900 dark:text-white">
           Projects
         </h2>
-        <p className="mt-4 text-secondary text-[17px] max-w-3xl mx-auto leading-[30px]">
+        <p className="mt-4 text-gray-600 dark:text-gray-300 text-[17px] max-w-3xl mx-auto leading-[30px]">
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with
           links to code repositories. It reflects my ability to solve complex problems,
@@ -49,7 +49,7 @@ const Projects = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="bg-[#151030] rounded-2xl p-5 h-full"
+            className="bg-white dark:bg-[#151030] rounded-2xl p-5 h-full shadow-lg"
           >
             <div className="relative w-full h-[260px] mb-5">
               <img
@@ -59,10 +59,10 @@ const Projects = () => {
               />
             </div>
 
-            <h3 className="text-[24px] font-bold">
+            <h3 className="text-[24px] font-bold text-gray-900 dark:text-white">
               {project.title}
             </h3>
-            <p className="mt-2 text-secondary text-[14px]">
+            <p className="mt-2 text-gray-700 dark:text-gray-300 text-[14px]">
               {project.description}
             </p>
             <div className="flex flex-wrap gap-2 mb-4 mt-4">
