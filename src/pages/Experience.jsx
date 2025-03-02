@@ -7,15 +7,20 @@ import "react-vertical-timeline-component/style.min.css"
 import tuLogo from '../assets/tu.png'
 import leetcodeLogo from '../assets/leetcode.png'
 import bookdLogo from '../assets/bookd.png'
+import { useEffect, useState } from 'react'
 
-const ExperienceCard = ({ experience }) => {
+const ExperienceCard = ({ experience, isDarkMode }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
-        color: "#fff",
+        background: isDarkMode ? "#1d1836" : "#ffffff",
+        color: isDarkMode ? "#fff" : "#333",
+        boxShadow: "0 3px 0 rgba(0, 0, 0, 0.1)",
+        border: isDarkMode ? "none" : "1px solid #e5e7eb",
       }}
-      contentArrowStyle={{ borderRight: "7px solid #1d1836" }}
+      contentArrowStyle={{ 
+        borderRight: isDarkMode ? "7px solid #1d1836" : "7px solid #ffffff" 
+      }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
@@ -29,8 +34,10 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
-        <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
-        <p className='text-secondary text-[16px] font-semibold' style={{ margin: 0 }}>
+        <h3 className={`${isDarkMode ? 'text-white' : 'text-gray-900'} text-[24px] font-bold`}>
+          {experience.title}
+        </h3>
+        <p className={`${isDarkMode ? 'text-secondary' : 'text-gray-600'} text-[16px] font-semibold`} style={{ margin: 0 }}>
           {experience.company_name}
         </p>
       </div>
@@ -39,7 +46,7 @@ const ExperienceCard = ({ experience }) => {
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className='text-white-100 text-[14px] pl-1 tracking-wider'
+            className={`${isDarkMode ? 'text-white-100' : 'text-gray-700'} text-[14px] pl-1 tracking-wider`}
           >
             {point}
           </li>
@@ -50,6 +57,22 @@ const ExperienceCard = ({ experience }) => {
 }
 
 const Experience = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  
+  useEffect(() => {
+    // Check if the user prefers dark mode
+    const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    setIsDarkMode(darkModeQuery.matches);
+    
+    // Listen for changes in the color scheme preference
+    const handleChange = (e) => {
+      setIsDarkMode(e.matches);
+    };
+    
+    darkModeQuery.addEventListener('change', handleChange);
+    return () => darkModeQuery.removeEventListener('change', handleChange);
+  }, []);
+
   const experiences = [
     {
       title: "IOS Developer",
@@ -72,7 +95,7 @@ const Experience = () => {
       date: "September 2024 - Present",
       points: [
         "Tutored university students in Object-Oriented Programming and Data Structures & Algorithms, simplifying complex concepts for better understanding",
-        "Provided personalized guidance and problem-solving strategies to enhance students’ coding proficiency and logical thinking",
+        "Provided personalized guidance and problem-solving strategies to enhance students' coding proficiency and logical thinking",
         "Assisted students with coding assignments, exam preparation, and debugging, leading to improved academic performance"
       ],
     },
@@ -98,10 +121,10 @@ const Experience = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <p className="text-[14px] uppercase tracking-wider text-center text-secondary">
+        <p className="text-[14px] uppercase tracking-wider text-center text-gray-600 dark:text-gray-400">
           What I have done so far
         </p>
-        <h2 className="text-4xl font-black text-center mt-2 mb-16">
+        <h2 className="text-4xl font-black text-center mt-2 mb-16 text-gray-900 dark:text-white">
           Leadership / Experience
         </h2>
       </motion.div>
@@ -112,6 +135,7 @@ const Experience = () => {
             <ExperienceCard
               key={`experience-${index}`}
               experience={experience}
+              isDarkMode={isDarkMode}
             />
           ))}
         </VerticalTimeline>
