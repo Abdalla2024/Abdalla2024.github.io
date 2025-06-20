@@ -76,15 +76,15 @@ const Experience = () => {
   const experiences = [
     {
       title: "IOS Developer",
-      company_name: "Bookd",
+      company_name: "Self-Employed",
       icon: bookdLogo,
       iconBg: "#ffffff",
       date: "January 2025 - Present",
       isBookd: true,
       points: [
-        "Assisted in developing Bookd: Reading Tracker, an iOS app built with Swift and Firebase, enabling users to track reading progress, speed, and habits",
-        "Integrated Google Books API for seamless book discovery and implemented features like reading timers, notes, quotes, and personalized progress analytics with charts and graphs",
-        "Contributed to bug fixes and feature enhancements based on user feedback, improving app stability and user experience post-launch on the App Store"
+        "Design, develop, and maintain multiple iOS applications using Swift and Firebase, focusing on user-friendly interfaces and robust functionality",
+        "Published personal projects to the App Store, including Bookd: a reading tracker app with features like timers, annotations, and analytics",
+        "Integrate third-party APIs (e.g., Google Books API) and perform rigorous QA testing to reduce crash rates and improve user engagement"
       ],
     },
     {
@@ -92,7 +92,7 @@ const Experience = () => {
       company_name: "Towson University",
       icon: tuLogo,
       iconBg: "#E6DEDD",
-      date: "September 2024 - Present",
+      date: "September 2024 - May 2025",
       points: [
         "Tutored university students in Object-Oriented Programming and Data Structures & Algorithms, simplifying complex concepts for better understanding",
         "Provided personalized guidance and problem-solving strategies to enhance students' coding proficiency and logical thinking",
