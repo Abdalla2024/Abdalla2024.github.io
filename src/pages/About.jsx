@@ -24,39 +24,41 @@ const About = () => {
             <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
               <li>Java</li>
               <li>Python</li>
-              <li>JavaScript</li>
               <li>C++</li>
+              <li>JavaScript/TypeScript</li>
               <li>Swift</li>
+              <li>SQL</li>
+              <li>HTML/CSS</li>
+              <li>LaTeX</li>
             </ul>
           </div>
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
-            <h3 className="font-bold text-xl mb-4 text-blue-600 dark:text-blue-400">Web Technologies</h3>
+            <h3 className="font-bold text-xl mb-4 text-blue-600 dark:text-blue-400">Frameworks & Libraries</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>React.js</li>
+              <li>React</li>
               <li>Node.js</li>
+              <li>Express</li>
               <li>Tailwind CSS</li>
+              <li>Firebase</li>
+              <li>JUnit</li>
             </ul>
           </div>
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
-            <h3 className="font-bold text-xl mb-4 text-blue-600 dark:text-blue-400">Databases</h3>
+            <h3 className="font-bold text-xl mb-4 text-blue-600 dark:text-blue-400">Data & Analytics</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
-              <li>MySQL</li>
               <li>MongoDB</li>
-              <li>Database Design</li>
-              <li>Query Optimization</li>
-              <li>Data Modeling</li>
+              <li>pandas</li>
+              <li>Tableau</li>
+              <li>Matplotlib</li>
             </ul>
           </div>
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
             <h3 className="font-bold text-xl mb-4 text-blue-600 dark:text-blue-400">Development Tools</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
-              <li>Git Version Control</li>
-              <li>VS Code</li>
-              <li>Terminal</li>
-              <li>VIM</li>
+              <li>Git/GitHub</li>
               <li>SVN</li>
+              <li>VS Code</li>
+              <li>Xcode</li>
             </ul>
           </div>
         </div>

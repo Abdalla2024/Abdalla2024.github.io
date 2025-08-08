@@ -7,7 +7,7 @@ const Projects = () => {
   const projects = [
     {
       title: 'University Marketplace',
-      description: '(In Progress) Online marketplace for students only. Students login with their university email and have a safe and convenient place to buy and sell items.',
+      description: 'Online marketplace for students only. Students login with their university email and have a safe and convenient place to buy and sell items.',
       technologies: ['MERN Stack', 'Tailwind CSS', 'Firebase'],
       image: marketplace,
       link: 'https://github.com/Abdalla2024/COSC484_Project'
