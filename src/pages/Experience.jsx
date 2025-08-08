@@ -5,8 +5,8 @@ import {
 } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
 import tuLogo from '../assets/tu.png'
-import leetcodeLogo from '../assets/leetcode.png'
 import bookdLogo from '../assets/bookd.png'
+import nsfLogo from '../assets/nsf.png'
 import { useEffect, useState } from 'react'
 
 const ExperienceCard = ({ experience, isDarkMode }) => {
@@ -75,24 +75,24 @@ const Experience = () => {
 
   const experiences = [
     {
-      title: "IOS Developer",
-      company_name: "Self-Employed",
+      title: "iOS Developer",
+      company_name: "Self-Employed — Remote",
       icon: bookdLogo,
       iconBg: "#ffffff",
-      date: "January 2025 - Present",
+      date: "Jan 2025 – Present",
       isBookd: true,
       points: [
-        "Design, develop, and maintain multiple iOS applications using Swift and Firebase, focusing on user-friendly interfaces and robust functionality",
-        "Published personal projects to the App Store, including Bookd: a reading tracker app with features like timers, annotations, and analytics",
-        "Integrate third-party APIs (e.g., Google Books API) and perform rigorous QA testing to reduce crash rates and improve user engagement"
+        "Published and maintained five native iOS applications on the App Store, achieving over 1,000 downloads and an average 4.6 rating",
+        "Manage projects end to end in an Agile/Scrum environment with a partner, guiding each app from initial wireframing and UI design through development, QA testing, and App Store release",
+        "Build scalable, maintainable codebases using SwiftUI, UIKit, StoreKit, and MVVM architecture, leveraging Combine and async/await for reactive, high-performance features"
       ],
     },
     {
       title: "Computer Science Tutor",
-      company_name: "Towson University",
+      company_name: "Towson University — College of Computing & Information Sciences (Towson, MD)",
       icon: tuLogo,
       iconBg: "#E6DEDD",
-      date: "September 2024 - May 2025",
+      date: "Sep 2024 – May 2025",
       points: [
         "Tutored university students in Object-Oriented Programming and Data Structures & Algorithms, simplifying complex concepts for better understanding",
         "Provided personalized guidance and problem-solving strategies to enhance students' coding proficiency and logical thinking",
@@ -100,16 +100,14 @@ const Experience = () => {
       ],
     },
     {
-      title: "Software Engineering Club Leader",
-      company_name: "Towson University",
-      icon: leetcodeLogo,
-      iconBg: "#2d2d2d",
-      date: "February 2024 - December 2024",
+      title: "Data Science Research Fellow",
+      company_name: "National Science Foundation (NSF) — Baltimore, MD",
+      icon: nsfLogo,
+      iconBg: "#ffffff",
+      date: "Sep 2024 – Dec 2024",
       points: [
-        "Organized and led weekly coding sessions, teaching students programming fundamentals and algorithms through hands-on practice",
-        "Conducted LeetCode problem-solving workshops twice a week to prepare members for technical coding interviews",
-        "Developed engaging lessons to explain complex data structures and algorithmic concepts, fostering a deeper understanding of problem-solving strategies",
-        "Facilitated a collaborative environment, resulting in improved coding skills and successful interviews for several participants"
+        "Used Python (pandas) and SQL to clean, merge, and analyze Baltimore City crime and resource datasets, applying regression analysis and simple clustering to uncover relationships",
+        "Built interactive dashboards with Tableau and Matplotlib to highlight trends, then presented actionable insights and recommendations to NSF and university stakeholders"
       ],
     },
   ]
